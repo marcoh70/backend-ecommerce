@@ -12,7 +12,25 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
-  
+        format_sql: true
+    show-sql: true
+
+  # Base url for data rest
   data:
     rest:
       base-path: /api
+
+# Redis config
+#    redis:
+#      host: localhost
+#      port: 6379
+#      password:
+#      ssl:
+#        enabled: false
+
+
+## issuer url must ends with "/"
+  okta:
+    oauth2:
+      issuer: https://<<UPDATE-WITH-YOUR-DOMAIN-NAME>>/okta.oauth2.client-id=<<UPDATE-WITH-YOUR-APP-CLIENT-ID>>okta.oauth2.audience=http://localhost:8080
+
